@@ -3,9 +3,6 @@
 /**
 * check_cycle - function that checks if the cycle of the 
 * linked list exist or not
-*
-* @list: list to check
-*
 * Return: 0 if there is no a cycle, 1 if there is a cycle
 */
 int check_cycle(listint_t *list)
@@ -14,17 +11,14 @@ int check_cycle(listint_t *list)
 	nextnode = list;
 	nextnextnode = list;
 	
-	while (1)
+	while (nextnode != NULL && nextnextnode != NULL && list != NULL)
 	{
-		if (nextnode != NULL && nextnextnode != NULL && list != NULL)
-		{
-			nextnode = nextnode->next;
-			nextnextnode = nextnextnode->next->next;
+		nextnode = nextnode->next;
+		nextnextnode = nextnextnode->next->next;
 	
-			if (nextnode == nextnextnode)
-				return (1);
-		}
-		else
-			return (0);
+		if (nextnode == nextnextnode)
+			return (1);
 	}
+	else
+		return (0);
 }
