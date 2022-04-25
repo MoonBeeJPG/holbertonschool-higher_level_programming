@@ -18,8 +18,7 @@ int check_cycle(listint_t *list)
 	
 		if (nextnode == nextnextnode)
 			return (1);
-		else 
+		else
 			return (0);
 	}
-	return (0);
 }
