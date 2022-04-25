@@ -7,9 +7,8 @@
 */
 int check_cycle(listint_t *list)
 {
-	listint_t *nextnextnode, *nextnode;
-	nextnode = list;
-	nextnextnode = list;
+	listint_t *nextnextnode = list;
+	listint_t *nextnode = list;
 	
 	while (nextnode && nextnextnode && list != NULL)
 	{
@@ -18,7 +17,6 @@ int check_cycle(listint_t *list)
 	
 		if (nextnode == nextnextnode)
 			return (1);
-		else
-			return (0);
 	}
+	return (0);
 }
