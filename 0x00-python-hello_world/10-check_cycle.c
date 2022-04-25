@@ -20,9 +20,7 @@ int check_cycle(listint_t *list)
 		nextnextnode = nextnextnode->next->next;
 	
 		if (nextnode == nextnextnode)
-		{
 			return (1);
-		}
 	}
 	return (0);
 }
