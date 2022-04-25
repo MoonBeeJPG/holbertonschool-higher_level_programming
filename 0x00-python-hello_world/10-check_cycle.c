@@ -13,15 +13,18 @@ int check_cycle(listint_t *list)
 	listint_t *nextnextnode, *nextnode;
 	nextnode = list;
 	nextnextnode = list;
-
-	if (nextnode != NULL && nextnextnode != NULL && list != NULL)
-	{
-		nextnode = nextnode->next;
-		nextnextnode = nextnextnode->next->next;
 	
-		if (nextnode == nextnextnode)
-			return (1);
+	while (1)
+	{
+		if (nextnode != NULL && nextnextnode != NULL && list != NULL)
+		{
+			nextnode = nextnode->next;
+			nextnextnode = nextnextnode->next->next;
+	
+			if (nextnode == nextnextnode)
+				return (1);
+		}
+		else
+			return (0);
 	}
-	else
-		return (0);
 }
