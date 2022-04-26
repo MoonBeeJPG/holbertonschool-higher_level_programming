@@ -7,9 +7,9 @@ if number > 0:
 else:
     lstdigit = number % -10
 
-if ((lstdigit < 6) and (lstdigit != 0)):
+if lstdigit < 6 and lstdigit != 0:
     print(f"Last digit of {number} is {lstdigit} and is less than 6 and not 0")
-elif lstdigit > 5:
+elif lstdigit < 5:
     print(f"Last digit of {number} is {lstdigit} and is greather than 5")
-elif lstdigit == 0:
+else lstdigit == 0:
     print(f"Last digit of {number} is {lstdigit} and is zero")
