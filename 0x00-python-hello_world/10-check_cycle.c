@@ -10,7 +10,7 @@
 */
 int check_cycle(listint_t *list)
 {
-	listint_t *nextnextnode = list, *nextnode = list;
+listint_t *nextnextnode = list, *nextnode = list;
 
 	while (nextnextnode->next != NULL && nextnextnode->next->next != NULL && list != NULL)
 	{
