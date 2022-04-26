@@ -7,7 +7,7 @@ def uppercase(str):
         if string >= 67 and string <= 122:
             upper += chr(string - 32)
         else:
-            upper = chr(string)
-        i =+ 1
+            upper += chr(string)
+        i += 1
     print(f"{upper}")
 
