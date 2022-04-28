@@ -1,2 +1,2 @@
 #!/usr/bin/python3
-import standar_out.output()
+from standar_out import output ; output()
