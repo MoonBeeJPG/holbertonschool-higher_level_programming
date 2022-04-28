@@ -3,7 +3,7 @@ if __name__ == "__main__":
     from calculator_1 import add, sub, mul, div
     import sys
     arguments = len(sys.argv) - 1
-    
+
     if arguments != 3:
         print(f"Usage: ./100-my_calculator.py <a> <operator> <b>")
         exit(1)
