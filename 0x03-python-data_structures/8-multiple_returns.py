@@ -1,7 +1,7 @@
 #!/usr/bin/python3
 def multiple_returns(sentence):
     if not sentence:
-        return False
+        return
     else:
         for i in range(len(sentence)):
             a = sentence[0]
