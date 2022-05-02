@@ -5,3 +5,6 @@ def multiple_returns(sentence):
             a = sentence[0]
             b = len(sentence)
         return b, a
+    else:
+        a = None
+        return a
