@@ -1,6 +1,4 @@
 #include "lists.h"
-#include <stddef.h>
-#include <stddef.h>
 /**
 * is_palindrome - Write a function that checks if a sigly linked
 * list is a palindrome
@@ -16,6 +14,7 @@ int is_palindrome(listint_t **head)
 
 	if (head == NULL)
 		return(0);
+	
 	if (*head == NULL)
 		return(1);
 	
@@ -24,9 +23,12 @@ int is_palindrome(listint_t **head)
 		current = current->next;
 		tam += 1;
 	}
+	
 	if(tam == 1)
 		return(1);
+	
 	current = *head;
+	
 	while (current != NULL)
 	{
 		datos[i++] = current->n;
