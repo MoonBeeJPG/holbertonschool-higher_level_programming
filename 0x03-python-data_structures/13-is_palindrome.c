@@ -12,7 +12,7 @@
 int is_palindrome(listint_t **head)
 {
 	listint_t *current = *head;
-	unsigned int i, datos[1024], tam = 0;
+	unsigned int i, datos[2048], tam = 0;
 
 	if (head == NULL)
 		return(0);
@@ -21,7 +21,7 @@ int is_palindrome(listint_t **head)
 	
 	while (current != NULL)
 	{
-		current =  current->next;
+		current = current->next;
 		tam += 1;
 	}
 	if(tam == 1)
