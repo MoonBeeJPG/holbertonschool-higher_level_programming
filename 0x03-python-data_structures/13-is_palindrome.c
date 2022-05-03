@@ -3,7 +3,7 @@
 * is_palindrome - Write a function that checks if a sigly linked
 * list is a palindrome
 *
-* @head: header of the linked list 
+* @head: header of the linked list
 *
 * Return: 0 if it is not a palindrome, 1 if it is a palindrome
 */
@@ -14,21 +14,21 @@ int is_palindrome(listint_t **head)
 
 	if (head == NULL)
 		return (0);
-	
+
 	if (*head == NULL)
 		return (1);
-	
+
 	while (current != NULL)
 	{
 		current = current->next;
 		tam += 1;
 	}
-	
+
 	if (tam == 1)
 		return (1);
-	
+
 	current = *head;
-	
+
 	while (current != NULL)
 	{
 		datos[i++] = current->n;
