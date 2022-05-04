@@ -6,3 +6,5 @@ def common_elements(set_1, set_2):
             elements = set_2
             if (common & elements):
                 return common & elements
+            else:
+                return
