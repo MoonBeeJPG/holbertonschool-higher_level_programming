@@ -15,10 +15,12 @@ def convertor(value):
     if value == 'M':
         return 1000
     return 0
+
+
 def roman_to_int(roman_string):
     i = 0
     result = 0
-    if not roman_string:
+    if not str(roman_string):
         return 0
     while (i < len(roman_string)):
         current = convertor(roman_string[i])
