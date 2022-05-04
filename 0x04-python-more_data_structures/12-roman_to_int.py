@@ -20,7 +20,7 @@ def convertor(value):
 def roman_to_int(roman_string):
     i = 0
     result = 0
-    if not str(roman_string):
+    if not roman_string:
         return 0
     while (i < len(roman_string)):
         current = convertor(roman_string[i])
