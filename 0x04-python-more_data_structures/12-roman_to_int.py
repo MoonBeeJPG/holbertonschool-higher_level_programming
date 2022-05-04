@@ -22,6 +22,8 @@ def roman_to_int(roman_string):
     result = 0
     if not roman_string:
         return 0
+    if not roman_string.isdigit():
+        return 0
     while (i < len(roman_string)):
         current = convertor(roman_string[i])
 
