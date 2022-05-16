@@ -3,7 +3,7 @@ def safe_print_division(a, b):
     qtient = None
     try:
         qtient = a / b
-    except (ValueError, TypeError):
+    except qtient.DoesNotExist:
         pass
     finally:
         if qtient is not None:
