@@ -5,9 +5,8 @@
 class Square:
     """square class, empty"""
     __size = None
-    """init the private __size atributte"""
+    """define the private __size attribute"""
     def __init__(self, size):
         """define the square"""
         self.__size = size
         """define"""
-~                               
