@@ -27,6 +27,7 @@ class Square:
 
     @size.setter
     def size(self, value):
+        """define size"""
         if type(value) != int:
             raise TypeError("size must be an integer")
         elif value < 0:
@@ -36,10 +37,12 @@ class Square:
 
     @property
     def position(self):
+        """define position"""
         return self.__position
 
     @position.setter
     def position(self, value):
+        """define position"""
         if (len(value) != 2 or type(value) is not tuple):
             raise TypeError("position must be a tuple of 2 posiive integers")
         elif (value[0] < 0 or value[1] < 0):
@@ -50,6 +53,7 @@ class Square:
             self.__position = value
 
     def my_print(self):
+        """define my_print"""
         if self.__size == 0:
             print("")
         else:
