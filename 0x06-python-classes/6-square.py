@@ -52,6 +52,6 @@ class Square:
         else:
             if self.__position[1] > 0:
                 for i in range(self.__position[1]):
-                    print()
+                    print("")
             for j in range(self.__size):
                 print(" " * self.position[0] + "#" * self.__size)
