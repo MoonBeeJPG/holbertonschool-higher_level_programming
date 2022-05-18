@@ -5,10 +5,12 @@
 class Square:
     """square class, empty"""
     def __init__(self, size=0, position=(0, 0)):
+        """init the square instance"""
         self.size = size
         self.position = position
 
     def area(self):
+        """returns the area"""
         return (self.__size ** 2)
 
     @property
@@ -38,6 +40,7 @@ class Square:
         self.__position = value
 
     def my_print(self):
+        """prints the square"""
         if self.__size == 0:
             print("")
         else:
@@ -48,6 +51,7 @@ class Square:
                 print(" " * self.__position[0] + "#" * self.__size)
 
     def square_cp(self):
+        """prints the square again"""
         cp_square = ""
         if self.__size == 0:
             cp_square += "\n"
