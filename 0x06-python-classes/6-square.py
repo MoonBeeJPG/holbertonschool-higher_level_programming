@@ -38,9 +38,9 @@ class Square:
         """define position"""
         if not isinstance(value, tuple) or len(value) != 2:
             raise TypeError("position must be a tuple of 2 posiive integers")
-        if not isinstance(value[0], int) or not isinstance(value[1], int:
+        if not isinstance(value[0], int) or not isinstance(value[1], int):
             raise TypeError("position must be a tuple of 2 posiive integers")
-        if value[0]) < 0 or value[1] < 0:
+        if value[0] < 0 or value[1] < 0:
             raise TypeError("position must be a tuple of 2 posiive integers")
         else:
             self.__position = value
