@@ -34,18 +34,18 @@ class Square:
 
     def __lt__(self, compare):
         return self.area() < compare.area()
-    
+
     def __le__(self, compare):
         return self.area() <= compare.area()
-    
+
     def __eq__(self, compare):
         return self.area() == comp.area()
-    
+
     def __ne__(self, compare):
         return self.area() != comp.area()
-    
+
     def __gt__(self, compare):
         return self.area() > comp.area()
-    
+
     def __ge__(self, compare):
         return self.area() >= comp.area()
