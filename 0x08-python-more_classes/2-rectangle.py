@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-"""a class Rectangle that defines a rectangle by 0-rectangle.py"""
+"""An class Rectangle that defines a rectangle based on 1-rectangle.py"""
 
 
 class Rectangle:
@@ -33,3 +33,12 @@ class Rectangle:
             raise ValueError("height must be >= 0")
         else:
             self.__height = value
+
+    def area(self):
+        return self.__height * self.__width
+
+    def perimeter(self):
+        if self.__width == 0 or self.__height == 0:
+            return 0
+        else:
+            return ((self.__width + self.__height) * 2)
