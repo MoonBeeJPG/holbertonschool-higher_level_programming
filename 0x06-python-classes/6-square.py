@@ -1,7 +1,6 @@
 #!/usr/bin/python3
 """A class Square that defines a square based on 3-squared.py"""
 
-
 class Square:
     """square class, empty"""
     def __init__(self, size=0, position=(0, 0)):
