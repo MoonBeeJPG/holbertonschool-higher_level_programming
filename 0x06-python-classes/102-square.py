@@ -37,13 +37,13 @@ class Square:
         return self.area() <= compare.area()
 
     def __eq__(self, compare):
-        return self.area() == comp.area()
+        return self.area() == compare.area()
 
     def __ne__(self, compare):
-        return self.area() != comp.area()
+        return self.area() != compare.area()
 
     def __gt__(self, compare):
-        return self.area() > comp.area()
+        return self.area() > compare.area()
 
     def __ge__(self, compare):
-        return self.area() >= comp.area()
+        return self.area() >= compare.area()
