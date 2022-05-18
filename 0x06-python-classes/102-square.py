@@ -4,8 +4,6 @@
 
 class Square:
     """square class, empty"""
-    __size = None
-    """define the private __size attribute"""
     def __init__(self, size=0):
         """define the init for the square"""
         if type(size) != int:
