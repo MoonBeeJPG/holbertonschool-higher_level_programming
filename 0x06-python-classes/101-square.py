@@ -47,7 +47,7 @@ class Square:
             for j in range(self.__size):
                 print(" " * self.__position[0] + "#" * self.__size)
 
-      def square_cp(self):
+    def square_cp(self):
         cp_square = ""
         if self.__size == 0:
             cp_square += "\n"
