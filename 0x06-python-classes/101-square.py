@@ -56,5 +56,5 @@ class Square:
                 for i in range(self.__position[1]):
                     cp_square += "\n"
             for j in range(self.__size):
-                cp_square += " " * self.__position[0] + "#" * self.__size = "\n"
+                cp_square += " " * self.__position[0] + "#" * self.__size + "\n"
         return cp_square[:-1]
