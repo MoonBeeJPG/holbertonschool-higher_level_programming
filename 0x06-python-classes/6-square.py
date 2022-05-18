@@ -4,8 +4,6 @@
 
 class Square:
     """square class, empty"""
-    __size = None
-    __position = None
     """define the private __size attribute"""
     def __init__(self, size=0, position=(0, 0)):
         """define the init for the square"""
@@ -14,8 +12,8 @@ class Square:
         elif size < 0:
             raise ValueError("size must be >= 0")
         else:
-            self.__size = size
-            self.__position = position
+            self.size = size
+            self.position = position
 
     def area(self):
         """define and return the area of the square"""
