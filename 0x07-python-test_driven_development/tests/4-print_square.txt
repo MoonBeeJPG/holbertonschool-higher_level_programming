@@ -1,0 +1,54 @@
+Using ''print_square''
+
+------------------------
+
+Check if size is type int
+Checks if size is less than 0
+Prints a square with "#" depending on size
+
+Import ''print_square''
+
+    >>> print_square = __import__('4-print_square').print_square
+
+Testers:
+
+Basic usage, test one:
+    >>> print_square(4)
+    ####
+    ####
+    ####
+    ####
+
+Negative input, test two:
+    >>> print_square(-4)
+    Traceback (most recent call last):
+    ...
+    ValueError: size must be >= 0
+
+Non int input, test three:
+    >>> print_square("h")
+    Traceback (most recent call last):
+    ...
+    TypeError: size must be an integer
+
+No input, test four:
+    >>> print_square()
+    Traceback (most recent call last):
+    ...
+    TypeError: print_square() missing 1 required positional argument: 'size'
+
+Zero input, test five:
+    >>> print_square(0)
+
+Float input given, test six:
+    >>> print_square(4.4)
+    Traceback (most recent call last):
+    ...
+    TypeError: size must be an integer
+
+More than one parameter passed, test seven:
+    >>> print_square(4, 4)
+    Traceback (most recent call last):
+    ...
+    TypeError: print_square() takes 1 positional argument but 2 were given
+

@@ -1,0 +1,57 @@
+Using ''add_integer''
+
+----------------------
+
+Import function--
+
+    >>> add_integer = __import__('0-add_integer').add_integer
+
+Testers -----
+
+Basic addition, test one:
+    >>> add_integer(1, 2)
+    3
+
+Negative input, test two:
+    >>> add_integer(100, -2)
+    98
+
+One input, test three:
+    >>> add_integer(2)
+    100
+
+Float and negative input, test four:
+    >>> add_integer(100.3, -2)
+    98
+
+Float overflow, test five:
+    >>> add_integer(1500.5)
+    1598
+
+String input in "b" position, test six:
+    >>> add_integer(4, "School")
+    Traceback (most recent call last):
+    ...
+    TypeError: b must be an integer
+
+None input, test seven:
+    >>> add_integer(None)
+    Traceback (most recent call last):
+    ...
+    TypeError: a must be an integer
+
+Double negative float input, test eight:
+    >>> add_integer(-100.5, -10.5)
+    -110
+
+String input, test nine:
+    >>> add_integer("Holberton")
+    Traceback (most recent call last):
+    ...
+    TypeError: a must be an integer
+
+Pass more than teo arguments, test ten:
+    >>> add_integer(2, 3, 4)
+    Traceback (most recent call last):
+    ...
+    TypeError: add_integer() takes from 1 to 2 positional arguments but 3 were given
