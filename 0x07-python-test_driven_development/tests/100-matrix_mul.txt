@@ -1,0 +1,70 @@
+Using ''matrix_mul''
+
+----------------------
+
+Check if m_a and m_b are lists
+Check if m_a and m_b are list of lists
+Check if m_a and m_b are empty
+Check if a element of the list of lists is int or float
+Check if m_a and m_b are rentangles
+Return the multiply of m_a and m_b
+
+Import ''matrix_mul''
+
+    >>> matrix_mul = __import__('100-matrix_mul').matrix_mul
+
+Testers:
+
+Basic usage, test one:
+    >>> matrix_mul([[1, 2], [3, 4]], [[5, 6], [7, 8]])
+    [[19, 22], [43, 50]]
+
+Negative input, test two:
+    >>> matrix_mul([[-1, -2], [-3, -4]], [[-5, -6], [-7, -8]])
+    [[19, 22], [43, 50]]
+
+Float inputs, test three:
+    >>> matrix_mul([[1.0, 2.0], [3.0, 4.0]], [[5.0, 6.0], [7.0, 8.0]])
+    [[19.0, 22.0], [43.0, 50.0]]
+
+Parameter m_a empty, test four:
+    >>> matrix_mul([[]], [[5, 6], [7, 8]])
+    Traceback (most recent call last):
+    ...
+    ValueError: m_a can't be empty
+
+Parameter m_b empty, test five:
+    >>> matrix_mul([[1, 2], [3, 4]], [[]])
+    Traceback (most recent call last):
+    ...
+    ValueError: m_b can't be empty
+
+Not a rentangle in m_a, test six:
+    >>> matrix_mul([[1, 2], [3, 4, 5]], [[6, 7], [8, 9]])
+    Traceback (most recent call last):
+    ...
+    TypeError: each row of m_a must be of the same size
+
+String input, test seven:
+    >>> matrix_mul([["Welcome"], ["To"]], [["Holberton"], ["School"]])
+    Traceback (most recent call last):
+    ...
+    TypeError: m_a should contain only integers or floats
+
+Not list input in m_a, test eight:
+    >>> matrix_mul((1, 2), [[3, 4], [5, 6]])
+    Traceback (most recent call last):
+    ...
+    TypeError: m_a must be a list
+
+Not list input in m_b, test nine:
+    >>> matrix_mul([[1, 2], [3, 4]], (5, 6))
+    Traceback (most recent call last):
+    ...
+    TypeError: m_b must be a list
+
+Not a rectangle in m_b, test ten:
+    >>> matrix_mul([[1, 2], [3, 4]], [[5, 6, 7], [8, 9]])
+    Traceback (most recent call last):
+    ...
+    TypeError: each row of m_b must be of the same size
