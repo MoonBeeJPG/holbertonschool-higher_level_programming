@@ -1,0 +1,62 @@
+Usage ''lazy_matrix_mul''
+
+---------------------------
+
+Import ''lazy_matrix_mul''
+
+    >>> lazy_matrix_mul = __import__('101-lazy_matrix_mul').lazy_matrix_mul
+
+Testers:
+
+Basic usage, test one:
+    >>> lazy_matrix_mul([[1, 2], [3, 4]], [[5, 6], [7, 8]])
+    array([[19, 22], 
+           [43, 50]])
+
+Negative input, test two:
+    >>> lazy_matrix_mul([[-1, -2], [-3, -4]], [[-5, -6], [-7, -8]])
+    array([[19, 22], 
+           [43, 50]])
+
+Float inputs, test three:
+    >>> lazy_matrix_mul([[1.0, 2.0], [3.0, 4.0]], [[5.0, 6.0], [7.0, 8.0]])
+    array([[19., 22.], 
+           [43., 50.]])
+
+Parameter m_a empty, test four:
+    >>> lazy_matrix_mul([[]], [[5, 6], [7, 8]])
+    Traceback (most recent call last):
+    ...
+    ValueError: shapes (1,0) and (2,2) not aligned: 0 (dim 1) != 2 (dim 0)
+
+Parameter m_b empty, test five:
+    >>> lazy_matrix_mul([[1, 2], [3, 4]], [[]])
+    Traceback (most recent call last):
+    ...
+    ValueError: shapes (2,2) and (1,0) not aligned: 2 (dim 1) != 1 (dim 0)
+
+Not a rentangle in m_a, test six:
+    >>> lazy_matrix_mul([[1, 2], [3, 4, 5]], [[6, 7], [8, 9]])
+    Traceback (most recent call last):
+    ...
+    ValueError: setting an array element with a sequence.
+
+String input, test seven:
+    >>> lazy_matrix_mul([["Welcome"], ["To"]], [["Holberton"], ["School"]])
+    Traceback (most recent call last):
+    ...
+    ValueError: shapes (2,1) and (2,1) not aligned: 1 (dim 1) != 2 (dim 0)
+
+Not list input in m_a, test eight:
+    >>> lazy_matrix_mul((1, 2), [[3, 4], [5, 6]])
+    array([13, 16])
+
+Not list input in m_b, test nine:
+    >>> lazy_matrix_mul([[1, 2], [3, 4]], (5, 6))
+    array([17, 39])
+   
+Not a rectangle in m_b, test ten:
+    >>> lazy_matrix_mul([[1, 2], [3, 4]], [[5, 6, 7], [8, 9]])
+    Traceback (most recent call last):
+    ...
+    ValueError: setting an array element with a sequence.

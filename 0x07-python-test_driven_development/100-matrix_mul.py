@@ -14,7 +14,7 @@ def matrix_mul(m_a, m_b):
     for i in m_b:
         if not isinstance(i, list):
             raise TypeError("m_b must be a list of lists")
-    
+
     if m_a == [] or m_a == [[]]:
         raise ValueError("m_a can't be empty")
     if m_b == [] or m_b == [[]]:
@@ -35,7 +35,7 @@ def matrix_mul(m_a, m_b):
     for i in m_b:
         if len(i) != len(m_b[0]):
             raise TypeError("each row of m_b must be of the same size")
-    
+
     try:
         result = 0
         new_matrix = []
