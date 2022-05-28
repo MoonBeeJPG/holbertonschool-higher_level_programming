@@ -3,6 +3,7 @@
 
 
 def matrix_divided(matrix, div):
+    """commit"""
     error = "matrix must be a matrix (list of lists) of integers/floats"
     if not isinstance(matrix, list):
         raise TypeError(error)
