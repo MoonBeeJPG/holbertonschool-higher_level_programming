@@ -11,6 +11,7 @@ class TestMaxInteger(unittest.TestCase):
         """ Check normal list of ints """
         self.assertEqual(max_integer([1, 2, 3, 4]), 4)
         self.assertEqual(max_integer([[-1, -2], [1, 2]]), [1, 2])
+        self.assertEqual(max_integer([[1, 2], [5, 6], [3, 4]]), [5, 6])
 
     def test_empty(self):
         """ Check if the list is empty """
