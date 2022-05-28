@@ -58,7 +58,7 @@ No special characters in string input, test three:
     Holberton
 
 Testing case, test four:
-    >>> text_indentation("Welcome. To? Holberton: School")
+    >>> text_indentation("Welcome.To? Holberton:School")
     Welcome.
     <BLANKLINE>
     To?
