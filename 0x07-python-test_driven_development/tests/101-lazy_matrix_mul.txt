@@ -48,8 +48,10 @@ String input, test seven:
     ValueError: shapes (2,1) and (2,1) not aligned: 1 (dim 1) != 2 (dim 0)
 
 Not list input in m_a, test eight:
-    >>> lazy_matrix_mul((1, 2), [[3, 4], [5, 6]])
-    array([13, 16])
+    >>> lazy_matrix_mul((1, 2, 3, 4), [[3, 4], [5, 6]])
+    Traceback (most recent call last):
+    ...
+    ValueError: shapes (4,) and (2, 2) not aligned: 4 (dim 0) !- 2 (dim 0)
 
 Not list input in m_b, test nine:
     >>> lazy_matrix_mul([[1, 2], [3, 4]], (5, 6))
@@ -67,7 +69,3 @@ Empty input:
     ...
     TypeError: lazy_matrix_mul() missiong 2 required positional arguments: 'm_a' and 'm_b'
 
-Input:
-    >>> lazy_matrix_mul([[1, 1], [1, 1]], [[1, 1], [1, 1]])
-    array([[4, 4],
-           [10, 8]])
