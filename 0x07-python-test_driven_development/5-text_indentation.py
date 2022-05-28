@@ -7,7 +7,10 @@ def text_indentation(text):
     """comment"""
     if not isinstance(text, str):
         raise TypeError("text must be a string")
-    chr1 = text.replace(". ", ".\n\n")
-    chr2 = chr1.replace("? ", "?\n\n")
-    chr3 = chr2.replace(": ", ":\n\n")
-    print(chr3, end="")
+    chr1 = text.replace(". ", ".\n\n").replace(
+            "? ", "?\n\n").replace(": ", ":\n\n")
+    chr1 = chr1.split("\n")
+
+    for i in chr1:
+        i = i.strip()
+        print(i + "\n", end="")
