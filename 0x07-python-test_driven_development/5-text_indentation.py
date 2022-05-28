@@ -9,7 +9,7 @@ def text_indentation(text):
         raise TypeError("text must be a string")
     chr1 = text.replace(". ", ".\n\n").replace(
             "? ", "?\n\n").replace(": ", ":\n\n")
-    chr1 = chr1.split("\n")
+    chr1 = text.split("\n")
 
     for i in chr1:
         i = i.strip()
