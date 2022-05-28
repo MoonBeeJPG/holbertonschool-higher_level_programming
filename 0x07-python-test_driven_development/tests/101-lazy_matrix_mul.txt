@@ -61,8 +61,8 @@ Not a rectangle in m_b, test ten:
     ...
     ValueError: setting an array element with a sequence.
 
-m_a with String, test eleven:
-    >>> lazy_matrix_mul([["Wlcome"]], [[1, 2], [3, 4]])
+Empty input:
+    >>> lazy_matrix_mul()
     Traceback (most recent call last):
     ...
-    TypeError: m_a must be a list
+    TypeError: lazy_matrix_mul() missiong 2 required positional arguments: 'm_a' and 'm_b'
