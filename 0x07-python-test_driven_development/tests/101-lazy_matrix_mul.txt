@@ -66,3 +66,8 @@ Empty input:
     Traceback (most recent call last):
     ...
     TypeError: lazy_matrix_mul() missiong 2 required positional arguments: 'm_a' and 'm_b'
+
+Input:
+    >>> lazy_matrix_mul([[1, 1], [1, 1]], [[1, 1], [1, 1]])
+    array([[4, 4],
+           [10, 8]])
