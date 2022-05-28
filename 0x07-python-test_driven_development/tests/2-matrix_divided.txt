@@ -69,3 +69,7 @@ Empty list passed, test eleven:
     Traceback (most recent call last):
     ...
     TypeError: matrix must be a matrix (list of lists) of integers/floats
+
+Float div input, test twelve:
+    >>> matrix_divided([[1, 2, 3], [4, 5.5, 6]], 43254365765414321543656215436)
+    [[0.0, 0.0, 0.0], [0.0, 0.0, 0.0]]
