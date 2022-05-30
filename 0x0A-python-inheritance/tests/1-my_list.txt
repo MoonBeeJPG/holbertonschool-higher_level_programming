@@ -19,12 +19,12 @@ Basic usage, test one:
     [0, 1, 5]
 
 String input, test two:
-    >>> my_list = MyList("holberton")
+    >>> my_list = MyList("betty")
 
     >>> my_list
-    ['h', 'o', 'l', 'b', 'e', 'r', 't', 'o', 'n']
+    ['b', 'e', 't', 't', 'y']
     >>> my_list.print_sorted()
-    ['h', 'o', 'l', 'b', 'e', 'r', 't', 'o', 'n']
+    ['b', 'e', 't', 't', 'y']
 
 Empty output, test three:
     >>> my_list = MyList()
