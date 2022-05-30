@@ -1,0 +1,19 @@
+Using ''my_list''
+
+---------------------
+
+Import ''my_list''
+
+    >>> MyList = __import__('1-my_list').MyList
+
+    >>> my_list = MyList()
+
+Testers:
+
+    >>> my_list = MyList([5, 1, 0])
+
+    >>> my_list
+    [5, 1, 0]
+
+    >>> my_list.print_sorted()
+    [0, 1, 5]
