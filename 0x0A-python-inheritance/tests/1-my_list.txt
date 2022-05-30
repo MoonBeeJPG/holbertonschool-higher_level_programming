@@ -10,10 +10,22 @@ Import ''my_list''
 
 Testers:
 
+Basic usage, test one:
     >>> my_list = MyList([5, 1, 0])
-
+    
     >>> my_list
     [5, 1, 0]
-
     >>> my_list.print_sorted()
     [0, 1, 5]
+
+String input, test two:
+    >>> my_list = MyList("holberton")
+
+    >>> my_list
+    ['h', 'o', 'l', 'b', 'e', 'r', 't', 'o', 'n']
+    >>> my_list.print_sorted()
+    ['h', 'o', 'l', 'b', 'e', 'r', 't', 'o', 'n']
+
+Empty output, test three:
+    >>> my_list = MyList()
+    []
