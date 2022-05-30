@@ -28,4 +28,5 @@ String input, test two:
 
 Empty output, test three:
     >>> my_list = MyList()
+    >>> my_list
     []
