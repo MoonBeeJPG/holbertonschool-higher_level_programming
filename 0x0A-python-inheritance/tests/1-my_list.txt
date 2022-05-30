@@ -40,3 +40,10 @@ Appending numbers, test four:
     [6, 5, 4]
     >>> my_list.print_sorted()
     [4, 5, 6]
+    >>> my_list
+    [6, 5, 4]
+
+New list, test five:
+    >>> newie = MyList()
+    >>> newie.print_sorted()
+    []
