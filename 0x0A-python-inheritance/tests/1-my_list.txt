@@ -30,3 +30,13 @@ Empty output, test three:
     >>> my_list = MyList()
     >>> my_list
     []
+
+Appending numbers, test four:
+    >>> my_list.append(6)
+    >>> my_list.append(5)
+    >>> my_list.append(4)
+    
+    >>> my_list
+    [6, 5, 4]
+    >>> my_list.print_sorted()
+    [4, 5, 6]
