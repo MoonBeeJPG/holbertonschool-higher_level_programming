@@ -2,7 +2,7 @@
 """ A class MyInt that inherits from int """
 
 
-class MyInti(int):
+class MyInt(int):
     """ class """
     def __init__(self, myint):
         """ comment """
