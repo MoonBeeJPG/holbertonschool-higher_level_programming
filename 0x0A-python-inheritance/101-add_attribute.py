@@ -4,9 +4,7 @@
 
 def add_attribute(obj, name, value):
     """ commit """
-    if not isinstance(name, str):
-        raise TypeError("can't add new attribute")
-    try:
-        exec(f"obj.{name} = value")
-    except:
+    if ('__dict__' in dir(obj)):
+        setattr(obj, name, value)
+    else:
         raise TypeError("can't add new attribute")
