@@ -7,8 +7,8 @@ class Rectangle(BaseGeometry):
     """ commit """
     def __init__(self, width, height):
         """ commit """
-        self.integer_validate("width", width)
-        self.integer_validate("height", height)
+        self.integer_validator("width", width)
+        self.integer_validator("height", height)
         self.__width = width
         self.__height = height
 
