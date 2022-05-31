@@ -70,6 +70,12 @@ Passing width list type, test ten:
     ...
     TypeError: width must be an integer
 
+Passing height wrong type, test eleven:
+    >>> bg.integer_validator("height", (1,))
+    Traceback (most recent call last):
+    ...
+    TypeError: height must be an integer
+
 Empty input, test twelve:
     >>> bg.integer_validator()
     Traceback (most recent call last):
@@ -77,7 +83,7 @@ Empty input, test twelve:
     TypeError: integer_validator() missing 2 required positional arguments: 'name' and 'value'
 
 Only variable name specified, test thirdteen:
-    >>> bg.integer_validator("name")
+    >>> bg.integer_validator("test")
     Traceback (most recent call last):
     ...
     TypeError: integer_validator() missing 1 required positional argument: 'value'
