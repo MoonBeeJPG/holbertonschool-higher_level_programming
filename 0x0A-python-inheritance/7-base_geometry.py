@@ -8,7 +8,7 @@ def BaseGeometry:
         """ comment """
         raise Exception("area() is not implemented")
 
-    def integer_validator(slef, name, value):
+    def integer_validator(self, name, value):
         """ comment """
         if not isinstance(value, int):
             raise TypeError(f"{name} must be an integer")
