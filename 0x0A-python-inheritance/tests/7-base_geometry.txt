@@ -70,12 +70,6 @@ Passing width list type, test ten:
     ...
     TypeError: width must be an integer
 
-Passint height wrong atype, test eleven:
-    >>> bg.integer_validator("height", (1,))
-    Traceback (most recent call last):
-    ...
-    TypeError: height must be an integer
-
 Empty input, test twelve:
     >>> bg.integer_validator()
     Traceback (most recent call last):
