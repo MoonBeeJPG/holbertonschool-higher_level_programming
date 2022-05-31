@@ -58,7 +58,7 @@ No value for height, test eight:
     ...
     TypeError: height must be an integer
 
-Passing width list type, test ten:
+dth less than 0, test five:
     >>> bg.integer_validator("width", [5])
         Traceback (most recent call last):
         ...
