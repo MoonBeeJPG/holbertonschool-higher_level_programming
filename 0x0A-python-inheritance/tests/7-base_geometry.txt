@@ -11,80 +11,87 @@ Import ''base_geometry''
 Testers:
 
 
-Basic usage, test one:
+Basic usage
     >>> bg.integer_validator("my_int", 12)
+
     >>> bg.integer_validator("integer", 89)
+
     >>> bg.area()
     Traceback (most recent call last):
     ...
     Exception: area() is not implemented
 
-String input, test two:
+String input
     >>> bg.integer_validator("name", "John")
     Traceback (most recent call last):
     ...
     TypeError: name must be an integer
 
-Size less than 0, test three:
+Size less than 0
     >>> bg.integer_validator("size", -4)
     Traceback (most recent call last):
     ...
     ValueError: size must be greater than 0
 
-Size equal to 0, test four:
+Size equal to 0
     >>> bg.integer_validator("size", 0)
     Traceback (most recent call last):
     ...
     ValueError: size must be greater than 0
 
-Width less than 0, test five:
+Width less than 0
     >>> bg.integer_validator("width", -2)
     Traceback (most recent call last):
     ...
     ValueError: width must be greater than 0
 
-Float size, test six:
+Float size
     >>> bg.integer_validator("size", 14.5)
     Traceback (most recent call last):
     ...
     TypeError: size must be an integer
 
-No variable name specified, test seven:
+No variable name specified
     >>> bg.integer_validator(None, 2)
 
-No value for height, test eight:
+No value for height
     >>> bg.integer_validator("height", None)
     Traceback (most recent call last):
     ...
     TypeError: height must be an integer
 
-Passing height wrong type, test nine:
+Passing height wrong type
     >>> bg.integer_validator("height", (1,))
     Traceback (most recent call last):
     ...
     TypeError: height must be an integer
 
-Empty input, test ten:
+Empty input
     >>> bg.integer_validator()
     Traceback (most recent call last):
     ...
     TypeError: integer_validator() missing 2 required positional arguments: 'name' and 'value'
 
-Only variable name specified, test eleven:
+Only variable name specified
     >>> bg.integer_validator("test")
     Traceback (most recent call last):
     ...
     TypeError: integer_validator() missing 1 required positional argument: 'value'
 
-variable value not a integer, test twelve:
+variable value not a integer
     >>> bg.integer_validator("name", {1, 0})
     Traceback (most recent call last):
     ...
     TypeError: name must be an integer
 
-No value passed for width, test thirdteen:
+name boolean
     >>> bg.integer_validator("name", True)
     Traceback (most recent call last):
     ...
     TypeError: name must be an integer
 
+name dict
+    >>> bg.integer_validator("name", [2])
+    Traceback (most recent call last):
+    ...
+    TypeError: name must be an integer
