@@ -87,3 +87,4 @@ No value passed for width, test thirdteen:
     Traceback (most recent call last):
     ...
     TypeError: name must be an integer
+
