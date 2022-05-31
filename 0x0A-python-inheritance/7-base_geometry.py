@@ -2,7 +2,7 @@
 """ A class BaseGeometry based on 6-base_geometry.py """
 
 
-def BaseGeometry:
+class BaseGeometry:
     """ comment """
     def area(self):
         """ comment """
