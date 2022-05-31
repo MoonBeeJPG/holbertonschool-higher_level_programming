@@ -7,8 +7,8 @@ def Square(Rectangle):
     """ comment """
     def __init__(self, size):
         """ comment """
-        self.integer_validator("size", size)
         super().__init__(size, size)
+        self.integer_validator("size", size)
         self.__size = size
 
     def area(self):
@@ -17,4 +17,4 @@ def Square(Rectangle):
 
     def __str__(self):
         """ print """
-        return f"[square] {self.__size}/{self.__size}"
+        return f"[Square] {self.__size}/{self.__size}"
