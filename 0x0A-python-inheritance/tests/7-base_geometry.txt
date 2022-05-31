@@ -83,7 +83,7 @@ variable value not a integer, test twelve:
     TypeError: name must be an integer
 
 No value passed for width, test thirdteen:
-    >>> bg.integer_validator("width", False)
+    >>> bg.integer_validator("width", True)
     Traceback (most recent call last):
     ...
     TypeError: width must be an integer
