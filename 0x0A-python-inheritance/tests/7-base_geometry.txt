@@ -58,13 +58,6 @@ No value for height, test eight:
     ...
     TypeError: height must be an integer
 
-No value for width, test nine:
-    >>> bg.integer_validator("width", False)
-    Traceback (most recent call last):
-    ...
-    TypeError: width must be an integer
-
-
 Passing height wrong type, test eleven:
     >>> bg.integer_validator("height", (1,))
     Traceback (most recent call last):
