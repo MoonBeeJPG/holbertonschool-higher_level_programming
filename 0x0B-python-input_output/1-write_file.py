@@ -3,7 +3,7 @@
     the number of characters written """
 
 
-def write_filename(filename="", text=""):
+def write_file(filename="", text=""):
     """ prototype defined """
-    with open('my_first_file.txt', encoding="utf-8") as MyFile:
-        MyFile.write("This School is so cool!")
+    with open(filename, mode="w") as MyFile:
+        return MyFile.write(text)
