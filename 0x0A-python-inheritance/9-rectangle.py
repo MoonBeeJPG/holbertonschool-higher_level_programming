@@ -5,10 +5,12 @@ BaseGeometry = __import__('7-base_geometry').BaseGeometry
 
 class Rectangle:
     """ commit """
-    self.integer_validate("width", width)
-    self.integer_validate("height", height)
-    self.__width = width
-    self.__height = height
+    def __init__(self, width, height):
+        """ commit """
+        self.integer_validate("width", width)
+        self.integer_validate("height", height)
+        self.__width = width
+        self.__height = height
 
     def area(self):
         """ commit """
