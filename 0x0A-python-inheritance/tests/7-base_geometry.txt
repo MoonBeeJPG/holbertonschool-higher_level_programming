@@ -75,3 +75,9 @@ Only variable name specified, test thirdteen:
     Traceback (most recent call last):
     ...
     TypeError: integer_validator() missing 1 required positional argument: 'value'
+
+variable value not a integer, test fourteen:
+    >>> bg.integer_validator("name", {1, 0})
+    Traceback (most recent call last):
+    ...
+    TypeError: name must be an integer
