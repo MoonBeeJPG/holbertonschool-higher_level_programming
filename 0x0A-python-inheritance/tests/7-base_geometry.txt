@@ -50,7 +50,7 @@ Float size, test six:
     TypeError: size must be an integer
 
 No variable name specified, test seven:
-    >>> bg.integer_validator(None, 45):
+    >>> bg.integer_validator(None, 5):
 
 No value for height, test eight:
     >>> bg.integer_validator("height", None)
