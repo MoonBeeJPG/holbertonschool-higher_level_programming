@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-""" a class Student that defines a student by 9-student.py """
+""" a class Student that defines a strudent by 10-student.py """
 
 
 class Student:
@@ -14,3 +14,7 @@ class Student:
             return {key: value for key, value in self.__dict__.items() if key in attrs}
         else:
             return self.__dict__
+
+    def reload_from_json(self, json):
+        for key, value in json.items():
+            self.__dict__[key] = value

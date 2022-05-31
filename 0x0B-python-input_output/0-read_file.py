@@ -4,6 +4,5 @@
 
 def read_file(filename=""):
     """ prototype defined """
-    with open('my_file_0.txt', encoding="utf-8") as i:
-        read_data = i.read()
-        print(read_data, end="")
+    with open('my_file_0.txt', "r") as i:
+        print(i.read())
