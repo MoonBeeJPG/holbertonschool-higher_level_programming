@@ -5,6 +5,4 @@
 
 def class_to_json(obj):
     """ prototype defined """
-    my_dict = {}
-    with open(obj, "w") as f:
-        return str(my_dict.dump(f))
+    return obj.__dict__
