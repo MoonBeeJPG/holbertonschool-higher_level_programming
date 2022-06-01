@@ -12,9 +12,11 @@ def pascal_triangle(n):
 
     new_list = [[1]]
     for i in range(n-1):
-        temporal = [1]
+        list = [1]
         for j in range(i):
-            temporal.append(new_list[-1][i] + new_list[-1][i+1])
-        temporal.append(1)
-        new_list.append(temporal)
+            list.append(new_list[-1][i] + new_list[-1][i+1])
+        
+        list.append(1)
+        new_list.append(list)
+    
     return new_list
