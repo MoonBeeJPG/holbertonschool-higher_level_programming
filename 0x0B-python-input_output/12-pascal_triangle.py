@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-""" a function that returns a list of lists of integers 
+""" a function that returns a list of lists of integers
     representing the Pascal's triangle of n """
 
 
@@ -15,8 +15,8 @@ def pascal_triangle(n):
         list = [1]
         for j in range(i):
             list.append(new_list[-1][i] + new_list[-1][i+1])
-        
+
         list.append(1)
         new_list.append(list)
-    
+
     return new_list
