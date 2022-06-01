@@ -6,4 +6,4 @@
 def append_write(filename="", text=""):
     """ prototype defined """
     with open(filename, mode="a") as MyFile:
-       return MyFile.write(text)
+        return MyFile.write(text)
