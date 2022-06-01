@@ -5,5 +5,12 @@
 
 def append_after(filename="", search_string="", new_string=""):
     """ prototype defined """
-    with open(filename, "r") as MyList:
-        
+    with open(filename, "r+") as MyList:
+        """ comment """
+        reading = MyList.readlines()
+        MyList.seek(0)
+        for i in reading:
+            if search_string in i:
+                MyList.write(new_string)
+            MyList.write(i)
+        MyList.truncate()
