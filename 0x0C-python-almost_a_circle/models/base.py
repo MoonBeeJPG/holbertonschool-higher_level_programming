@@ -33,5 +33,3 @@ class Base:
                 [obj.to_dictionary() for i in list_objs])
         with open(file_name, "w") as MyFile:
             MyFile.write(lists)
-
-
