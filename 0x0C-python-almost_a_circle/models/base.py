@@ -30,6 +30,6 @@ class Base:
             lists = "[]"
         else:
             lists = cls.to_json_string(
-                [obj.to_dictionary() for i in list_objs])
+                [obj.to_dictionary() for obj in list_objs])
         with open(file_name, "w") as MyFile:
             MyFile.write(lists)
