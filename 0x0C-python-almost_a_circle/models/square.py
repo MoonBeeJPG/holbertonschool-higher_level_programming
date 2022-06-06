@@ -40,3 +40,9 @@ class Square(Rectangle):
         if arguments == 0:
             for key, value in kwargs.items():
                 exec("self.{} = {}".format(key, value))
+
+        def to_dictionary(self):
+            """ return dictionary """
+            dictionary = {"id": self.id, "size": self.size, "x": self.x,
+                          "y": self.y}
+            return dictionary
