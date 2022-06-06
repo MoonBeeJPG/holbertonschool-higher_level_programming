@@ -33,3 +33,10 @@ class Base:
                 [obj.to_dictionary() for obj in list_objs])
         with open(file_name, "w") as MyFile:
             MyFile.write(lists)
+
+    def from_json_string(json_string):
+        """ returning list of json string representation json_string """
+        if json_string is None and len(json_string) == 0:
+            return []
+        else:
+            return json.loads(json_string)
