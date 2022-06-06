@@ -37,6 +37,7 @@ class Square(Rectangle):
                 exec("self.{} = {}".format(key, value))
 
     def to_dictionary(self):
+        """ returning dictionary """
         dictionary = {"id": self.id, "size": self.width, "x": self.x,
                       "y": self.y}
         return dictionary
