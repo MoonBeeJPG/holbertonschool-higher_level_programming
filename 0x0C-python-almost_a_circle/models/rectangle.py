@@ -15,6 +15,7 @@ class Rectangle(Base):
 
     @property
     def height(self):
+        """ comment """
         return self.__height
 
     @height.setter
@@ -28,6 +29,7 @@ class Rectangle(Base):
 
     @property
     def width(self):
+        """ comment """
         return self.__width
 
     @width.setter
@@ -41,6 +43,7 @@ class Rectangle(Base):
 
     @property
     def x(self):
+        """ comment """
         return self.__x
 
     @x.setter
@@ -54,6 +57,7 @@ class Rectangle(Base):
 
     @property
     def y(self):
+        """ comment """
         return self.__y
 
     @y.setter
@@ -100,6 +104,7 @@ class Rectangle(Base):
                 exec("self.{} = {}".format(key, value))
 
     def to_dictionary(self):
+        """ returns dictionary """
         dictionary = {'x': self.x, 'y': self.y, 'id': self.id,
                 'height': self.height, 'width': self.width}
         return dictionary
