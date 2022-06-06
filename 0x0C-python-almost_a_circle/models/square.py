@@ -9,6 +9,11 @@ class Square(Rectangle):
         """ init attributes """
         super().__init__(size, size, x, y, id)
 
+    def __str__(self):
+        """ str """
+        return "[Square] ({}) {}/{} - {}".\
+            format(self.id, self.x, self.y, self.width)
+
     @property
     def size(self):
         """ comment """
