@@ -86,7 +86,7 @@ class Base:
             if "Rectangle" in filename:
                 fields = ["id", "width", "height", "x", "y"]
             elif "Square" in filename:
-                fields= ["id", "size", "x", "y"]
+                fields = ["id", "size", "x", "y"]
             obj_list = []
             with open(filename, "r") as MyFile:
                 reading = csv.DictReader(MyFile)
