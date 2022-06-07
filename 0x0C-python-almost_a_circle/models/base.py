@@ -77,7 +77,7 @@ class Base:
                 writer = csv.DictWriter(f, fieldnames=fields)
                 writer.writeheader()
                 for obj in list_objs:
-                   writer.writerow(obj.to_dictionary())
+                    writer.writerow(obj.to_dictionary())
 
     @classmethod
     def load_from_file_csv(cls):
