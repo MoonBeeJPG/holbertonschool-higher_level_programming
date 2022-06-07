@@ -34,6 +34,7 @@ class Base:
         with open(file_name, "w") as MyFile:
             MyFile.write(lists)
 
+    @staticmethod
     def from_json_string(json_string):
         """ returning list of json string representation json_string """
         if json_string is None or len(json_string) == 0:
@@ -51,6 +52,7 @@ class Base:
         dummy.update(**dictionary)
         return dummy
 
+    @classmethod
     def load_from_file(cls):
         """ returning list of instances """
         filename = cls.__name__ = ".json"
