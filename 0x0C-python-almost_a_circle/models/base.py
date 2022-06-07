@@ -68,16 +68,16 @@ class Base:
     def save_to_file_csv(cls, list_objs):
         """ serializes and deserialized in CSV """
         if list_objs:
-            filename = cls.__name__ + ".cvs"
-            with open(filename, "w") as MyFile:
+            filename = cls.__name__ + ".csv"
+            with open(filename, "w") as f:
                 if "Rectangle" in filename:
                     fields = ["id", "width", "height", "x", "y"]
                 elif "Square" in filename:
                     fields = ["id", "size", "x", "y"]
-                writing = csv.DictWriter(MyFile, fieldnames=fields)
-                writing.writeheader()
+                writer = csv.DictWriter(f, fieldnames=fields)
+                writer.writeheader()
                 for obj in list_objs:
-                    writing.writerow(obj.to_dictionary())
+                   writer.writerow(obj.to_dictionary())
 
     @classmethod
     def load_from_file_csv(cls):
