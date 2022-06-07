@@ -55,7 +55,7 @@ class Base:
     @classmethod
     def load_from_file(cls):
         """ returning list of instances """
-        filename = cls.__name__ = ".json"
+        filename = cls.__name__ + ".json"
         try:
             with open(filename, "r") as MyFile:
                 return [cls.create(**obj) for obj
