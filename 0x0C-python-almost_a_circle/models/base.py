@@ -88,15 +88,15 @@ class Base:
                 fields = ["id", "width", "height", "x", "y"]
             elif "Square" in filename:
                 fields = ["id", "size", "x", "y"]
-            obj_list = []
-            with open(filename, "r") as MyFile:
-                reading = csv.DictReader(MyFile)
-                for i in reading:
+            list_objs = []
+            with open(filename, "r") as f:
+                reader = csv.DictReader(f)
+                for row in reader:
                     if len(fields) == 4:
-                        instance = cls(1)
+                        n_inst = cls(1)
                     elif len(fields) == 5:
-                        instance = cls(1, 1)
-                    for j, k in enumerate(i):
-                        setattr(instance, fields[j], int(i[k]))
-                    obj_list.append(instance)
-                return obj_list
+                        n_inst = cls(1, 1)
+                    for a, field in enumerate(row):
+                        setattr(n_inst, fields[a], int(row[field]))
+                    list_objs.append(n_inst)
+            return list_objs
