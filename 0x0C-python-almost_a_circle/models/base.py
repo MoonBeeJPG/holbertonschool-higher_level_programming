@@ -62,3 +62,40 @@ class Base:
                         in cls.from_json_string(MyFile.read())]
         except FileNotFoundError:
             return []
+
+    @classmethod
+    def save_to_file_csv(cls, list_objs):
+        """ serializes and deserialized in CSV """
+        if list_objs:
+            filename = cls.__name__ + ".cvs"
+            with open(filename, "w") as MyFile:
+                if "Rectangle" in filename:
+                    fields = ["id", "width", "height", "x", "y"]
+                elif "Square" in filename:
+                    fields = ["id", "size", "x", "y"]
+                writing = csv.DictWriter(MyFile, fieldnames=fields)
+                writing.writeheader()
+                for obj in list_objs:
+                    writing.writerow(obj.to_dictionary())
+
+    @classmethod
+    def load_from_file_csv(cls):
+        """ serializes and deserialized in CSV """
+        filename = cls.__name__ + ".csv"
+        if (filename):
+            if "Rectangle" in filename:
+                fields = ["id", "width", "height", "x", "y"]
+            elif "Square" in filename:
+                fields= ["id", "size", "x", "y"]
+            obj_list = []
+            with open(filename, "r") as MyFile:
+                reading = csv.DictReader(MyFile)
+                for i in reading:
+                    if len(fields) == 4:
+                        instance = cls(1)
+                    elif len(fields) == 5:
+                        instance = cls(1, 1)
+                    for j, k in enumerate(i):
+                        setattr(instance, fields[j], int(i[k]))
+                    obj_list.append(instance)
+                return obj_list
