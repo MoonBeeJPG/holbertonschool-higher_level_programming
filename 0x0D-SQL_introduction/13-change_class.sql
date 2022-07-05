@@ -1,2 +1,2 @@
 -- sql
-SELECT DROP score, name WHERE score <= 5 ORDER BY score DESC;
+DELETE FROM second_table WHERE score <= 5;
