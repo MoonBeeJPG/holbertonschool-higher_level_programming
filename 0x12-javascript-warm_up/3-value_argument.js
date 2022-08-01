@@ -1,5 +1,7 @@
 #!/usr/bin/node
 const myVar = process.argv;
-myVar.forEach((val) => {
-  console.log(`${val}`);
-});
+if (myVar[2]) {
+  console.log(myVar[2]);
+} else {
+  console.log('No argument');
+}
