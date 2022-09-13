@@ -9,4 +9,4 @@ axios.get(argument[2]).then(function (response) {
       console.error(error);
     }
   });
-})
+});
