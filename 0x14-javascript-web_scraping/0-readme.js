@@ -1,11 +1,11 @@
 #!/usr/bin/node
 const argument = process.argv;
-const request = require('request');
+const fs = require('fs');
 
-request.readFile(argument[2], 'utf8', (error, response) => {
+fs.readFile(argument[2], 'utf8', (error, response) => {
  if (error) {
   console.error(error);
-  return
+  return;
  } else {
   console.log(response);
  }
